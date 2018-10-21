@@ -1,0 +1,19 @@
+{
+  "name": "mern-comment-box",
+  "version": "1.0.0",
+  "description": "Build a comment box using the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maccode421/MERN-Comment-Box.git"
+  },
+  "author": "MVP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maccode421/MERN-Comment-Box/issues"
+  },
+  "homepage": "https://github.com/maccode421/MERN-Comment-Box#readme"
+}
