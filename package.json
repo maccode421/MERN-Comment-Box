@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/maccode421/MERN-Comment-Box/issues"
   },
-  "homepage": "https://github.com/maccode421/MERN-Comment-Box#readme"
+  "homepage": "https://github.com/maccode421/MERN-Comment-Box#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4"
+  }
 }
