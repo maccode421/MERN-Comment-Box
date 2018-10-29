@@ -10,16 +10,8 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maccode421/MERN-Comment-Box.git"
-  },
   "author": "MVP",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maccode421/MERN-Comment-Box/issues"
-  },
-  "homepage": "https://github.com/maccode421/MERN-Comment-Box#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -28,14 +20,7 @@
     "concurrently": "^4.0.1",
     "express": "^4.16.4",
     "mongoose": "^5.3.4",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.4"
   }
 }
