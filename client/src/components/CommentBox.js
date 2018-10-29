@@ -8,7 +8,7 @@ class CommentBox extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
     };
   }
 

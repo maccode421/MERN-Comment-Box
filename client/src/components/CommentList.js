@@ -16,7 +16,7 @@ const CommentList = (props) => {
 };
 
 CommentList.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shapes({
+  data: PropTypes.arrayOf(PropTypes.shape({
     author: PropTypes.string,
     id: PropTypes.string,
     text: PropTypes.string,
