@@ -12,9 +12,9 @@ const db = require('./keys').dbURI;
 
 // connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true})
-// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 .then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // now configure the API to use bodyParser and look for JSON data in the request body
 app.use(bodyParser.urlencoded({ extended: false }));
