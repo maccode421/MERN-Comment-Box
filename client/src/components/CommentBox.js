@@ -29,13 +29,33 @@ class CommentBox extends Component {
     this.pollInterval = null;
   }
 
+  onChangeText = (e) => {
+    const newState = { ...this.state };
+    newState[e.target.name] = e.target.value;
+    this.setState(newState);
+  }
+
+  submitComment = (e) => {
+    e.preventDefault();
+    const { author, comment } = this.state;
+    if (!author || !comment) return;
+    fetch('/api/comments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ author, comment }),
+    }).then(res => res.json()).then((res) => {
+      if (!res.success) this.setState({ error: res.error.message || res.error });
+      else this.setState({ author: '', text: '', error: null });
+    });
+  }
+
   loadCommentsFromServer = () => {
     // fetch returns a promise
     fetch('/api/comments/')
       .then(data => data.json())
       .then((res) => {
         if (!res.success) this.setState({ error: res.error });
-        else this.setState({ data: res.data };)
+        else this.setState({ data: res.data });
       });
   }
 
@@ -47,7 +67,12 @@ class CommentBox extends Component {
           <CommentList data={this.state.data} />
         </div>
         <div className="form">
-          <CommentForm author={this.state.author} text={this.state.text} />
+          <CommentForm 
+            author={this.state.author} 
+            text={this.state.text} 
+            handleChangeText={this.onChangeText}
+            handleSubmit={this.submitComment}
+          />
         </div>
         {this.state.error && <p>{this.state.error}</p>}
       </div>
